@@ -12,7 +12,7 @@ const NewsBoard = ({category}) => {
          const fetchNews = async () =>{
                 try {
                
-                let url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=f07539b22e844c90a9f1fefd1b1546f4`        
+                let url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`        
                 const response = await fetch(url)
                  if(!response.ok)
                  {
