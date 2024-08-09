@@ -5,7 +5,7 @@ const NewsBoard = ({category}) => {
     const [articles,setArticles] = useState([]);
     const [error,setError] = useState(null)
     const [loading,setLoading] = useState(true)
-    console.log(category)
+
     useEffect(()=>{
       
        setLoading(true)
@@ -22,7 +22,7 @@ const NewsBoard = ({category}) => {
                 setArticles(data.articles)
                     
                 } catch (error) {
-                    console.log(error)
+                   
                      setError(error.message)
                 }
                 finally{
@@ -31,7 +31,7 @@ const NewsBoard = ({category}) => {
          }
 
          fetchNews()
-         console.log(articles)
+    
     },[category])
     if(error)
         return <div className='flex items-center justify-center h-[90vh] '>

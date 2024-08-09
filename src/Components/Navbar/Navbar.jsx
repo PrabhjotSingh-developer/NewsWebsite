@@ -3,14 +3,14 @@ import { CgOverflow } from "react-icons/cg";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 const Navbar = ({ menubar, setMenubar, setCategory }) => {
-  //   const [menubar, setMenubar] = useState(false);
+ 
   function handleToggle() {
     setMenubar(!menubar);
   }
   function handleCategory(v) {
     setCategory(v);
   }
-  console.log(menubar, setMenubar);
+ 
   return (
     <div
       className={`w-[100%] py-5 bg-slate-900 lg:px-20 md:px-10 text-white  md:h-auto ${
