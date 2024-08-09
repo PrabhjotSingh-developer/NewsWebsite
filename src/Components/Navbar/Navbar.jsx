@@ -2,21 +2,20 @@ import React, { useState } from "react";
 import { CgOverflow } from "react-icons/cg";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-const Navbar = ({menubar,setMenubar,setCategory}) => {
-//   const [menubar, setMenubar] = useState(false);
-function handleToggle()
-{
-    setMenubar(!menubar)
-         
-}
-function handleCategory(v){
-  setCategory(v)
-  console.log(v)
-}
-console.log(menubar,setMenubar)
+const Navbar = ({ menubar, setMenubar, setCategory }) => {
+  //   const [menubar, setMenubar] = useState(false);
+  function handleToggle() {
+    setMenubar(!menubar);
+  }
+  function handleCategory(v) {
+    setCategory(v);
+  }
+  console.log(menubar, setMenubar);
   return (
     <div
-      className={`w-[100%] py-5 bg-slate-900 lg:px-20 md:px-10 text-white  md:h-auto ${menubar?"":""}  `}
+      className={`w-[100%] py-5 bg-slate-900 lg:px-20 md:px-10 text-white  md:h-auto ${
+        menubar ? "" : ""
+      }  `}
     >
       <nav
         className={`flex items-center  gap-16 w-full relative md:static px-6 py-4 md:py-0`}
@@ -33,37 +32,93 @@ console.log(menubar,setMenubar)
           style={{ transition: ".2s linear all" }}
         >
           <li>
-            <button onClick={()=>handleCategory("General")}>Home</button>
+            <button
+              onClick={() => {
+                handleCategory("General");
+                if(menubar)
+                  handleToggle()
+              }}
+            >
+              Home
+            </button>
           </li>
           <li>
-            <button  onClick={()=>handleCategory("sports")}>Sports</button>
+            <button
+              onClick={() => {
+                handleCategory("sports");
+                if(menubar)
+                  handleToggle()
+              }}
+            >
+              Sports
+            </button>
           </li>
           <li>
-            <button  onClick={()=>handleCategory("business")}>business</button>
+            <button
+              onClick={() => {
+                handleCategory("business");
+                if(menubar)
+                  handleToggle()
+              }}
+            >
+              business
+            </button>
           </li>
           <li>
-            <button  onClick={()=>handleCategory("entertainment")} >Entertainment</button>
+            <button
+              onClick={() => {
+                handleCategory("entertainment");
+                if(menubar)
+                  handleToggle()
+              }}
+            >
+              Entertainment
+            </button>
           </li>
           <li>
-            <button onClick={()=>handleCategory("science")} >Science</button>
+            <button
+              onClick={() => {
+                handleCategory("science");
+                if(menubar)
+                  handleToggle()
+              }}
+            >
+              Science
+            </button>
           </li>
           <li>
-            <button  onClick={()=>handleCategory("technology")}>Technology</button>
+            <button
+              onClick={() => {
+                handleCategory("technology");
+                if(menubar)
+                  handleToggle()
+              }}
+            >
+              Technology
+            </button>
           </li>
           <li>
-            <button  onClick={()=>handleCategory("health")} >Health</button>
+            <button
+              onClick={() => {
+                handleCategory("health");
+                if(menubar)
+                  handleToggle()
+              }}
+            >
+              Health
+            </button>
           </li>
         </ul>
         {menubar ? (
           <ImCross
             className="absolute right-[5%] md:hidden"
-            onClick={()=>handleToggle()}
+            onClick={() => handleToggle()}
             style={{ transition: ".2s liner all" }}
           />
         ) : (
           <FaBars
             className="absolute right-[5%] md:hidden"
-            onClick={()=>handleToggle()}
+            onClick={() => handleToggle()}
             style={{ transition: ".2s liner all" }}
           />
         )}
