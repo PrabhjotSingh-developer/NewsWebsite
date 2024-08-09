@@ -38,7 +38,7 @@ const NewsBoard = ({category}) => {
               <h2 className='text-[1.5rem]'>Cannot load the data</h2>
         </div>
     if(loading)
-          return <div className='flex items-center justify-center h-[60vh]'>
+          return <div className='flex items-center justify-center h-[90vh]'>
                        <h2 className='text-[1.5rem]'>Loading...</h2>
           </div>
   return (
