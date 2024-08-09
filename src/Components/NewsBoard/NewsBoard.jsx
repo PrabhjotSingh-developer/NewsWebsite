@@ -46,7 +46,7 @@ const NewsBoard = ({category}) => {
         <div className="heading">
               <h2 className='text-[1.4rem] capitalize'>{category=="General"?"Latest":category} <span className='bg-red-950 text-white'>News</span></h2>
         </div>
-        <div className='flex flex-wrap w-[100%] gap-10 justify-center px-4 md:px-8  ' >
+        <div className='flex  w-[100%] gap-10 justify-center md:justify-between  px-4 md:px-8  flex-wrap' >
                 {
                     articles.map((item,index)=>(
                         <NewsItem item= {item} key={item.source.id + index}/>

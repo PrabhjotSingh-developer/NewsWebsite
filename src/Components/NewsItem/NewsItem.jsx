@@ -3,7 +3,7 @@ import React from 'react'
 const NewsItem = ({item}) => {
      const {title,description, urlToImage,url} = item
   return (
-   <div className='md:W-[45%] lg:w-[30%] mt-10 w-[100%] p-4 border-[ bg-slate-900] border-2 border-solid gap-4 flex flex-col items-start' >
+   <div className='md:w-[45%] lg:w-[30%] sm:w-[70%] mt-10 w-[100%] p-4 border-[ bg-slate-900] border-2 border-solid gap-4 flex flex-col items-start' >
         
            <div className='w-[100%] h-[200px]  bg-slate-900 mx-auto flex items-center justify-center' >
                {urlToImage ?
